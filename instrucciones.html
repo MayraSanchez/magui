@@ -33,7 +33,7 @@ function getNombre(){
 					nombre = arg_value;					
 				}
 			}
-			if(nombre.length >	 0 ){
+			if(nombre.length == 0 ){
 			nombre = document.getElementById("userInput").value;
 		}
 		if (nombre.length == 0) {
@@ -63,7 +63,7 @@ function getNombre(){
 		<img class="personaje" src="resources/imgs/ayudante02.png">						
 	</div>	
 	<div id="boton-div">
-			<a  href="categorias.html"><button id="boton" onclick="jugar()">Jugar</button></a>
+			<button id="boton" onclick="jugar()">Jugar</button></a>
 	</div>	
 	<script type="text/javascript" src="instrucciones.js"></script>	
 </body>

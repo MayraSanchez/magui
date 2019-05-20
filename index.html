@@ -35,10 +35,10 @@
 			arg_value = queries[i].split('=')[1]
 			if(arg_name == 'nombre'){
 				nombre = arg_value;
-				break
+				
 			}
 		}
-		if(nombre.length >	 0 ){
+		if(nombre.length ==	 0 ){
 			nombre = document.getElementById("userInput").value;
 		}
 		if (nombre.length == 0) {
