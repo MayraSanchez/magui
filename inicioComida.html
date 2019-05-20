@@ -1,0 +1,63 @@
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Memory Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="files/reset.min.css">
+	<link rel='stylesheet' href='files/css.css'>
+	<link rel='stylesheet' href='files/font-awesome.min.css'>
+	<link rel="stylesheet" href="css/style_inicio.css">
+	<!-- changed: lo del tiempo -->
+	<script src="js/time.js"></script>
+	<script>
+		var timer = new Timer();
+		timer.start();
+		timer.addEventListener('secondsUpdated', function (e) {
+			$('#basicUsage').html(timer.getTimeValues().toString());
+		});
+	</script>
+	
+	<script>
+		//changed
+		function getArg(arg){
+			var queryString = decodeURIComponent(window.location.search);
+			queryString = queryString.substring(1);
+			var queries = queryString.split("&");
+			for (var i = 0; i < queries.length; i++){
+				arg_name = queries[i].split('=')[0]
+				arg_value = queries[i].split('=')[1]
+				if(arg_name == arg){
+					return arg_value
+				}
+			}
+			return '';
+		}
+		
+		function inicio(){  
+			my_url='categorias.html';
+			my_name=getArg('nombre');
+			window.location.href = my_url+"?nombre="+my_name;
+		}	
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="game"></div>
+		<div class="modal-overlay">
+			<div class="modal">
+				<h2 class="winner">Ganaste!</h2>
+				<button class="restart">Jugar de nuevo</button>
+<img class="personaje" src="resources/imgs/ayudante01.png" style=" position:relative; width: 33%; left: 38%">        
+			</div>
+		</div>	
+		<!-- changed: lo del tiempo -->
+		<div id="basicUsage">00:00:00</div>
+		<div id="boton-div">
+		<!-- changed: volver a inicio -->
+			<button id="boton" onclick="inicio();">Volver a inicio</button>
+		</div>	
+	</div><!-- End Wrap -->
+	<script src='files/jquery.min.js'></script>
+    <script  src="js/indexComida.js"></script>
+</body>
+</html>

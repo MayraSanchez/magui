@@ -1,0 +1,125 @@
+
+/* 'Open Sans' font from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  background: linear-gradient(to right, blue,white,red);
+  background-image: linear-gradient(to right, blue 33.33%, white 33.33%, white 66.66%, red 66.66%);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+  width: 33%;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;  
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 10px solid transparent;
+  border-bottom-color: black;  
+  transform: rotate(180deg);
+}
+
+.login-header {
+  background: white;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  border: 1px solid black;
+}
+
+.login-container {
+  background: transparent; /*color del contenedor del muñequito*/
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="button"] {
+  background: blue;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-10px);
+	}
+}
+
+.login input[type="button"]:hover {  
+  background: rgb(7, 109, 192);
+  animation: bounce 1s;
+}
+
+/* Buttons' focus effect */
+.login input[type="button"]:focus {
+  border-color: #05a;
+}
+
+
+/* -------------------- Page Styles (not required) */
+div { margin: 20px; }
+
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */

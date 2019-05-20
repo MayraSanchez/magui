@@ -1,0 +1,41 @@
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Memory Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="files/reset.min.css">
+	<link rel='stylesheet' href='files/css.css'>
+	<link rel='stylesheet' href='files/font-awesome.min.css'>
+	<link rel="stylesheet" href="css/style_inicio.css">
+	<!-- changed: lo del tiempo -->
+	<script src="js/time.js"></script>
+	<script>
+		var timer = new Timer();
+		timer.start();
+		timer.addEventListener('secondsUpdated', function (e) {
+			$('#basicUsage').html(timer.getTimeValues().toString());
+		});
+	</script>
+</head>
+<body>
+	
+	<div class="wrap">
+		<div class="game"></div>
+		<div class="modal-overlay">
+			<div class="modal">
+				<h2 class="winner">Ganaste!</h2>
+				<button class="restart">Jugar de nuevo</button>
+				<!--<button class="restart">Volver a inicio</button>-->
+			</div>
+		</div>		
+		
+		<div id="boton-div">
+			<a  href="index.html"><button id="boton" onclick="">Volver a inicio</button></a>
+		</div>
+		
+	</div><!-- End Wrap -->
+
+	<script src='files/jquery.min.js'></script>
+    <script  src="js/indexCuerpo.js"></script>
+</body>
+</html>
