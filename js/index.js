@@ -112,7 +112,7 @@
 		changeMessage: function(){
 			var nombre = Memory.getName();
 			var the_score = Memory.getScore();
-			document.getElementsByClassName('winner')[0].textContent = "Felicidades "+ nombre+ " lo lograste en: " +  the_score;
+			document.getElementsByClassName('winner')[0].textContent = "Felicidades "+ nombre+ ", lo lograste en: " +  the_score;
 		},
 		//changed
 		getName: function(){

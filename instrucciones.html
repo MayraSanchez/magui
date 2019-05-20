@@ -10,6 +10,15 @@
 	<link rel='stylesheet' href='css/style_instrucciones.css'>
 	<title>Instrucciones</title>		
 	<script type="text/javascript">
+		function jugar(){
+		nombre = document.getElementById("userInput").value
+		if(nombre.length == 0){
+			nombre='player1';
+		}
+		var queryString = "?nombre=" + nombre;
+		window.location.href = 'categorias.html'+queryString;
+	}
+
   	 function regresar(){
 		 window.history.go(-1);
 	 }
@@ -28,7 +37,7 @@
 		<img class="personaje" src="resources/imgs/ayudante02.png">						
 	</div>	
 	<div id="boton-div">
-			<a  href="categorias.html"><button id="boton" onclick="regresar()">Jugar</button></a>
+			<a  href="categorias.html"><button id="boton" onclick="jugar()">Jugar</button></a>
 	</div>	
 	<script type="text/javascript" src="instrucciones.js"></script>	
 </body>
